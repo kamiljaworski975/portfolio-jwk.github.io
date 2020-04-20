@@ -88,13 +88,6 @@ hold.addEventListener("click", function () {
       swipeB[i].classList.remove("hov");
     }
   }
-  const month = date.getMonth();
-
-  const dayNow = date.getDay();
-  for (let i = 0; i < 8; i++) {
-    time[i].innerHTML = `${date.getHours()}:${date.getMinutes()}`;
-    day[i].innerHTML = `${days[dayNow]}, ${months[month]} ${date.getDate()}`;
-  }
 });
 
 wrapper.addEventListener("mousedown", function () {
@@ -103,8 +96,6 @@ wrapper.addEventListener("mousedown", function () {
     swipeB[i].classList.remove("hov");
   }
 });
-
-const date = new Date();
 
 const days = [
   "Sunday",
@@ -131,4 +122,40 @@ const months = [
   "December",
 ];
 
-console.log(window.innerWidth);
+const startClock = () => {
+  const date = new Date();
+  let month = date.getMonth();
+  let dayNow = date.getDay();
+  let m = date.getMinutes();
+  let hour = date.getHours();
+  for (let i = 0; i < 8; i++) {
+    time[i].innerHTML = `${hour}:${m}`;
+    day[i].innerHTML = `${days[dayNow]}, ${months[month]} ${date.getDate()}`;
+  }
+};
+
+startClock();
+
+const clock = () => {
+  const date = new Date();
+  let month = date.getMonth();
+  let dayNow = date.getDay();
+  let m = date.getMinutes();
+  let hour = date.getHours();
+
+  for (let i = 0; i < 8; i++) {
+    time[i].innerHTML = `${hour}:${m}`;
+    day[i].innerHTML = `${days[dayNow]}, ${months[month]} ${date.getDate()}`;
+  }
+};
+
+const interval = setInterval(clock, 1000);
+
+const goToSocial = (name) => {
+  name === "Linkedin"
+    ? window.open(
+        "https://www.linkedin.com/in/kamil-jaworski-b0500b1a3/",
+        "_blank"
+      )
+    : window.open("https://www.facebook.com/JaworskiEBiznes/", "_blank");
+};
