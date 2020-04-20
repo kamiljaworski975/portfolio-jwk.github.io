@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+      
+        <link rel="stylesheet" href="./css/swiper/swiper.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/logoPor.png">
+        
+        <link href="css/fonts/css/all.css" rel="stylesheet">
+        
+        
+        <title>JWK | Exciting code for programers</title>
+    </head>
+
+    <body>
+        <div id="main" class="scroll-container">
+        <div class="navigation">
+            <input onchange="handleToggle()" type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#About" onclick="scroll_to('#About')" class="navigation__link"><span>01</span>About Me</a></li>
+                    <li class="navigation__item"><a onclick="scroll_to('#features')" href="#features" class="navigation__link"><span>02</span>My skills</a></li>
+                    <li class="navigation__item"><a onclick="scroll_to('#section-tours')" href="#tours" class="navigation__link"><span>03</span>Portfolio</a></li>
+                    <li class="navigation__item"><a onclick="scroll_to('#stories')" href="#stories" class="navigation__link"><span>04</span>Lorem</a></li>
+                    <li class="navigation__item"><a onclick="scroll_to('#book')" href="#book" class="navigation__link"><span>05</span>Contact now</a></li>
+                    </ul>
+            </nav>
+        </div>
+        <header class="header section1">
+            <div class="header__logo-box">
+                <a href=""><img src="img/logoPor.png" alt="Logo" class="header__logo"></a>
+            </div>
+
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">< Coding ></Coding>  </span>
+                    <span class="heading-primary--sub">is my life</span>
+                </h1>
+
+                <a href="#section-tours" class="btn btn--white btn--animated">Discover our code</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="section-about section2" id="About">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        Get to know me better
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h3 class="heading-tertiary u-margin-bottom-small">Lorem Ipsum</h3>
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
+                            ducimus quam nisi exercitationem omnis earum qui.
+                        </p>
+
+                        <h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum</h3>
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
+                        </p>
+
+                        
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="composition">
+
+                            <img srcset="img/cars.jpg 300w"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                 alt="Photo 1"
+                                 class="composition__photo composition__photo--p1"
+                                 src="img/cars.jpg">
+
+                            <img srcset="img/golf.jpg 300w"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                 alt="Photo 2"
+                                 class="composition__photo composition__photo--p2"
+                                 src="img/golf.jpg">
+
+                            <img srcset="img/gitara.jpg 300w"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                 alt="Photo 3"
+                                 class="composition__photo composition__photo--p3"
+                                 src="img/gitara.jpg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-features section3" id="features">
+                <div class="row" >
+                    <img src="./img/phone.png" class="swiper-phone">
+                    <div class="swiper-hold">click</div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide swiper-slide-1">
+                              <div class="swiper-box">
+                                  <div class="swiper-top-left">
+                                      <p>Carrier</p>
+                                    <i class="fas fa-wifi"></i>
+                                  </div>
+                                  <div class="swiper-top-right">
+                                    <i class="fas fa-battery-three-quarters"></i>
+                                </div>
+                                <div class="swiper-time">
+                                    <h4 class="time">8:30</h4>
+                                    <p class="day">Sunday, April 19</p>
+                                </div>
+                                  <div class="swiper-title">
+                                      <h3>HTML5</h3>
+                                  </div>
+                                  <div class="swiper-dots">
+                                      <div></div>
+                                      <div></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="swiper-slide swiper-slide-2">
+                            <div class="swiper-box">
+                                <div class="swiper-top-left">
+                                    <p>Carrier</p>
+                                  <i class="fas fa-wifi"></i>
+                                </div>
+                                <div class="swiper-top-right">
+                                  <i class="fas fa-battery-three-quarters"></i>
+                              </div>
+                              <div class="swiper-time">
+                                <h4 class="time">8:30</h4>
+                                <p class="day">Sunday, April 19</p>
+                              </div>
+                                <div class="swiper-title">
+                                    <h3>CSS3</h3>
+                                </div>
+                                <div class="swiper-dots">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide swiper-slide-3">
+                            <div class="swiper-box">
+                                <div class="swiper-top-left">
+                                    <p>Carrier</p>
+                                  <i class="fas fa-wifi"></i>
+                                </div>
+                                <div class="swiper-top-right">
+                                  <i class="fas fa-battery-three-quarters"></i>
+                              </div>
+                              <div class="swiper-time">
+                                <h4 class="time">8:30</h4>
+                                <p class="day">Sunday, April 19</p>
+                              </div>
+                                <div class="swiper-title">
+                                    <h3>JAVASCRIPT</h3>
+                                </div>
+                                <div class="swiper-dots">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide swiper-slide-4">
+                            <div class="swiper-box">
+                                <div class="swiper-top-left">
+                                    <p>Carrier</p>
+                                  <i class="fas fa-wifi"></i>
+                                </div>
+                                <div class="swiper-top-right">
+                                  <i class="fas fa-battery-three-quarters"></i>
+                              </div>
+                              <div class="swiper-time">
+                                <h4 class="time">8:30</h4>
+                                <p class="day">Sunday, April 19</p>
+                              </div>
+                                <div class="swiper-title">
+                                    <h3>React</h3>
+                                </div>
+                                <div class="swiper-dots">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide swiper-slide-5">
+                            <div class="swiper-box">
+                                <div class="swiper-top-left">
+                                    <p>Carrier</p>
+                                  <i class="fas fa-wifi"></i>
+                                </div>
+                                <div class="swiper-top-right">
+                                  <i class="fas fa-battery-three-quarters"></i>
+                              </div>
+                              <div class="swiper-time">
+                                <h4 class="time">8:30</h4>
+                                <p class="day">Sunday, April 19</p>
+                              </div>
+                                <div class="swiper-title">
+                                    <h3>Redux</h3>
+                                </div>
+                                <div class="swiper-dots">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide swiper-slide-6">
+                            <div class="swiper-box">
+                                <div class="swiper-top-left">
+                                    <p>Carrier</p>
+                                  <i class="fas fa-wifi"></i>
+                                </div>
+                                <div class="swiper-top-right">
+                                  <i class="fas fa-battery-three-quarters"></i>
+                              </div>
+                              <div class="swiper-time">
+                                <h4 class="time">8:30</h4>
+                                <p class="day">Sunday, April 19</p>
+                              </div>
+                                <div class="swiper-title">
+                                    <h3>Firebase</h3>
+                                </div>
+                                <div class="swiper-dots">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide swiper-slide-7">
+                            <div class="swiper-box">
+                                <div class="swiper-top-left">
+                                    <p>Carrier</p>
+                                  <i class="fas fa-wifi"></i>
+                                </div>
+                                <div class="swiper-top-right">
+                                  <i class="fas fa-battery-three-quarters"></i>
+                              </div>
+                              <div class="swiper-time">
+                                <h4 class="time">8:30</h4>
+                                <p class="day">Sunday, April 19</p>
+                              </div>
+                                <div class="swiper-title">
+                                    <h3>Jira</h3>
+                                </div>
+                                <div class="swiper-dots">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide swiper-slide-8">
+                            <div class="swiper-box">
+                                <div class="swiper-top-left">
+                                    <p>Carrier</p>
+                                  <i class="fas fa-wifi"></i>
+                                </div>
+                                <div class="swiper-top-right">
+                                  <i class="fas fa-battery-three-quarters"></i>
+                              </div>
+                              <div class="swiper-time">
+                                <h4 class="time">8:30</h4>
+                                <p class="day">Sunday, April 19</p>
+                              </div>
+                                <div class="swiper-title">
+                                    <h3>Scrum</h3>
+                                </div>
+                                <div class="swiper-dots">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                          </div>
+                        </div> 
+                    </div>   
+                </div>
+            </section>
+
+            <section class="section-tours" id="section-tours">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        some of my work
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="container">
+                        <div class="carousel">
+                            <div class="item a">
+                                <div onclick="rotate('prev')" class="prev">
+                                    <i class="fas fa-arrow-left icon"></i>
+                                </div>
+                                <div class="btn--carousel">
+                                    <a href="https://kamiljaworski975.github.io/black-theme.github.io/" target="_blank" class="btn btn--white btn--animated">Visit Website</a>
+                                </div>
+                                <img src="img/black-theme.jpg" />
+                                <div onclick="rotate('next')" class="next">
+                                    <i class="fas fa-arrow-right icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="item b">
+                                <div onclick="rotate('prev')" class="prev">
+                                    <i class="fas fa-arrow-left icon"></i>
+                                </div>
+                                <div class="btn--carousel">
+                                    <a href="https://kamiljaworski975.github.io/brand-theme.github.io/" target="_blank" class="btn btn--white btn--animated">Visit Website</a>
+                                </div>
+                                <img src="img/secong-theme.jpg" />
+                                <div onclick="rotate('next')" class="next">
+                                    <i class="fas fa-arrow-right icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="item c">
+                                <div onclick="rotate('prev')" class="prev">
+                                    <i class="fas fa-arrow-left icon"></i>
+                                </div>
+                                <div class="btn--carousel">
+                                    <a href="https://kamiljaworski975.github.io/budget.github.io/" target="_blank" class="btn btn--white btn--animated">Visit Website</a>
+                                </div>
+                                <img src="img/Budget_app.jpg" />
+                                <div onclick="rotate('next')" class="next">
+                                    <i class="fas fa-arrow-right icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="item d">
+                                <div onclick="rotate('prev')" class="prev">
+                                    <i class="fas fa-arrow-left icon"></i>
+                                </div>
+                                <div class="btn--carousel">
+                                    <a href="https://kamiljaworski975.github.io/dice.github.io/" target="_blank" class="btn btn--white btn--animated">Visit Website</a>
+                                </div>
+                                <img src="img/dice-game.jpg" />
+                                <div onclick="rotate('next')" class="next">
+                                    <i class="fas fa-arrow-right icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="item e">
+                                <div onclick="rotate('prev')" class="prev">
+                                    <i class="fas fa-arrow-left icon"></i>
+                                </div>
+                                <div class="btn--carousel">
+                                    <a href="#section-tours" class="btn btn--white btn--animated">Visit Website</a>
+                                </div>
+                                <img src="img/hero.jpg" />
+                                <div onclick="rotate('next')" class="next">
+                                    <i class="fas fa-arrow-right icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="item f">
+                                <div onclick="rotate('prev')" class="prev">
+                                    <i class="fas fa-arrow-left icon"></i>
+                                </div>
+                                <div class="btn--carousel">
+                                    <a href="#section-tours" class="btn btn--white btn--animated">Coming soon</a>
+                                </div>
+                                <img src="img/shop-theme.jpg" />
+                                <div onclick="rotate('next')" class="next">
+                                    <i class="fas fa-arrow-right icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="u-center-text u-margin-top-huge">
+                        <a href="https://github.com/kamiljaworski975" target="_blank" class="btn btn--green">Discover all works</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-stories" id="stories">
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="img/video.mp4" type="video/mp4">
+                        <source src="img/video.webm" type="video/webm">
+                        Your browser is not supported!
+                    </video>
+                </div>
+
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        Check My Social Media
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img src="img/prof.jpg" alt="Person on a tour" class="story__img">
+                            <figcaption class="story__caption">Check it</figcaption>
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small">orem ipsum dolor sit amet consectetur</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
+                                ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
+                                repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img src="img/fbfoto.jpg" alt="Person on a tour" class="story__img">
+                            <figcaption class="story__caption">Check it</figcaption>
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small">orem ipsum dolor sit amet consectetur </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
+                                ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
+                                repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </section>
+
+            <section class="section-book" id="book">
+                <div class="row">
+                    <div class="book">
+                        <div class="book__form">
+                            <form action="#" class="form">
+                                <div class="u-margin-bottom-medium">
+                                    <h2 class="heading-secondary">
+                                        Contact Me
+                                    </h2>
+                                </div>
+
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Full name" id="name" required>
+                                    <label for="name" class="form__label">Full name</label>
+                                </div>
+
+                                <div class="form__group">
+                                    <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                                    <label for="email" class="form__label">Email address</label>
+                                </div>
+
+                                <div class="form__group u-margin-bottom-medium">
+                                    <div class="form__radio-group">
+                                        <input type="radio" class="form__radio-input" id="small" name="size">
+                                        <label for="small" class="form__radio-label">
+                                            <span class="form__radio-button"></span>
+                                            Agree
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form__group">
+                                    <button class="btn btn--green">Next step &rarr;</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+
+        <footer class="footer">
+            <div class="footer__logo-box">
+                <img class="footer__logo" src="img/logoPor.png" alt="Full logo">
+                <h3 class="heading-tertiary">JWK programming</h3>
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Lorem</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Lorem</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        Built by <a href="#" class="footer__link">KAMIL JAWORSKI</a> for his online portfolio<a href="#" class="footer__link">JWK PROGRAMING</a>.
+                        Copyright &copy; by Kamil Jaworski.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+       
+    </div>  
+    <script src="./css/swiper/swiper.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+      </script>
+
+    </body>
+</html>
