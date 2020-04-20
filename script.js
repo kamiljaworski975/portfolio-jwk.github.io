@@ -127,7 +127,7 @@ const startClock = () => {
   let month = date.getMonth();
   let dayNow = date.getDay();
   let m = date.getMinutes();
-  const cor = "0" + m;
+  let cor = "0" + m;
   let hour = date.getHours();
   for (let i = 0; i < 8; i++) {
     time[i].innerHTML = `${hour}:${m < 10 ? cor : m}`;
@@ -142,7 +142,7 @@ const clock = () => {
   let month = date.getMonth();
   let dayNow = date.getDay();
   let m = date.getMinutes();
-  const cor = "0" + m;
+  let cor = "0" + m;
   let hour = date.getHours();
   for (let i = 0; i < 8; i++) {
     time[i].innerHTML = `${hour}:${m < 10 ? cor : m}`;
