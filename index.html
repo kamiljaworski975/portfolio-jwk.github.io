@@ -31,11 +31,11 @@
 
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#About" onclick="scroll_to('#About')" class="navigation__link"><span>01</span>About Me</a></li>
-                    <li class="navigation__item"><a onclick="scroll_to('#features')" href="#features" class="navigation__link"><span>02</span>My skills</a></li>
-                    <li class="navigation__item"><a onclick="scroll_to('#section-tours')" href="#tours" class="navigation__link"><span>03</span>Portfolio</a></li>
-                    <li class="navigation__item"><a onclick="scroll_to('#stories')" href="#stories" class="navigation__link"><span>04</span>Social Media</a></li>
-                    <li class="navigation__item"><a onclick="scroll_to('#book')" href="#book" class="navigation__link"><span>05</span>Contact now</a></li>
+                    <li class="navigation__item"><a href="#About" onclick="scroll_to('#About')" class="navigation__link" data-text="About Me">About Me</a></li>
+                    <li class="navigation__item"><a onclick="scroll_to('#features')" href="#features" class="navigation__link" data-text="My skills">My skills</a></li>
+                    <li class="navigation__item"><a onclick="scroll_to('#section-tours')" href="#tours" class="navigation__link" data-text="Portfolio">Portfolio</a></li>
+                    <li class="navigation__item"><a onclick="scroll_to('#stories')" href="#stories" class="navigation__link" data-text="Social Media">Social Media</a></li>
+                    <li class="navigation__item"><a onclick="scroll_to('#book')" href="#book" class="navigation__link" data-text="Contact now">Contact now</a></li>
                     </ul>
             </nav>
         </div>
@@ -83,24 +83,21 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
-
-                            <img srcset="img/cars.jpg 300w"
-                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                                 alt="Photo 1"
-                                 class="composition__photo composition__photo--p1"
-                                 src="img/cars.jpg">
-
-                            <img srcset="img/golf.jpg 300w"
-                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                                 alt="Photo 2"
-                                 class="composition__photo composition__photo--p2"
-                                 src="img/golf.jpg">
-
-                            <img srcset="img/gitara.jpg 300w"
-                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                                 alt="Photo 3"
-                                 class="composition__photo composition__photo--p3"
-                                 src="img/gitara.jpg">
+                            <div class="composition--box box-1">
+                                <div class="composition--img">
+                                    <img src="./img/cars.jpg">
+                                </div>
+                            </div>
+                            <div class="composition--box box-2">
+                                <div class="composition--img">
+                                    <img src="./img/golf.jpg">
+                                </div>
+                            </div>
+                            <div class="composition--box box-3">
+                                <div class="composition--img">
+                                    <img src="./img/gitara.jpg">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -429,53 +426,11 @@
             </section>
 
             <section class="section-stories" id="stories">
-                <div class="bg-video">
-                    <video class="bg-video__content" autoplay muted loop>
-                        <source src="img/video.mp4" type="video/mp4">
-                        <source src="img/video.webm" type="video/webm">
-                        Your browser is not supported!
-                    </video>
-                </div>
-
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
-                        Check My Social Media
-                    </h2>
-                </div>
-
-                <div class="row">
-                    <div class="story">
-                        <figure class="story__shape" onclick="goToSocial('Linkedin')">
-                            <img src="img/prof.jpg" alt="Person on a tour" class="story__img">
-                            <figcaption class="story__caption">Check it</figcaption>
-                        </figure>
-                        <div class="story__text">
-                            <h3 class="heading-tertiary u-margin-bottom-small">Linkedin profile</h3>
-                            <p>
-                                " Niektórzy mówią: "Dajmy klientowi, czego chce". Ale to nie jest moje podejście. Naszym zadaniem jest ustalić, czego klient będzie chciał, zanim tego zapragnie. To chyba Henry Ford powiedział"Gdybym pytał klientów, czego chcą, powiedzieliby, ze szybszego konia!". Ludzie nie wiedzą, czego chcą, dopóki im tego nie pokażę. Dlatego właśnie nigdy nie opieram się na badaniach rynku. Naszym zadaniem jest odczytać to, co nie zostało jeszcze zapisane. ""
-                            </p>
-                            <span>Steve Jobs</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="story">
-                        <figure class="story__shape" onclick="goToSocial('Facebook')">
-                            <img src="img/fbfoto.jpg" alt="Person on a tour" class="story__img">
-                            <figcaption class="story__caption">Check it</figcaption>
-                        </figure>
-                        <div class="story__text">
-                            <h3 class="heading-tertiary u-margin-bottom-small">Facebook profile </h3>
-                            <p>
-                                " Nie, ja pracować nie lubię. Wolę próżnować i myśleć o wszystkich pięknych rzeczach, które można by zrobić. Nie lubię pracy – żaden człowiek jej nie lubi – ale lubię to, co jest w pracy – sposobność do odnalezienia siebie samego, swej własnej rzeczywistości – dla siebie, nie dla innych – której inni ludzie poznać nie mogą. Widzą tylko pozory i nigdy nie są w stanie powiedzieć, co one naprawdę znaczą. "
-                            </p>
-                            <span>Joseph Conrad, „Jądro ciemności”</span>
-                        </div>
-                    </div>
-                </div>
-
-                
+                <div class="banner">
+                    
+                    <i onClick="goToSocial('Facebook')" class="fab fa-facebook-f"></i>
+                    <i onClick="goToSocial('Linkedin')" class="fab fa-linkedin"></i>
+                  </div>
             </section>
 
             <section class="section-book" id="book">
@@ -540,7 +495,6 @@
                 <div class="col-1-of-2">
                     <p class="footer__copyright">
                         Built by <a href="#" class="footer__link">KAMIL JAWORSKI</a> for his online portfolio<a href="#" class="footer__link">JWK PROGRAMING</a>.
-                        Copyright &copy; by Kamil Jaworski.
                     </p>
                 </div>
             </div>
@@ -571,6 +525,5 @@
           },
         });
       </script>
-
     </body>
 </html>

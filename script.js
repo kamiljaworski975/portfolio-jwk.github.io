@@ -97,6 +97,13 @@ wrapper.addEventListener("mousedown", function () {
   }
 });
 
+wrapper.addEventListener("touchstart", function () {
+  for (let i = 0; i < 8; i++) {
+    swipeB[i].classList.remove("hov");
+    swipeB[i].classList.remove("hov");
+  }
+});
+
 const days = [
   "Sunday",
   "Monday",
@@ -160,5 +167,3 @@ const goToSocial = (name) => {
       )
     : window.open("https://www.facebook.com/JaworskiEBiznes/", "_blank");
 };
-
-console.log("hahah");
