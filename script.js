@@ -16,13 +16,13 @@ const handleToggle = () => {
   }
 };
 
-function scroll_to(selector) {
+const scroll_to = (selector) => {
   $("html,body").animate({ scrollTop: $(selector).offset().top }, 1000);
   list.checked = false;
   body.style.overflow = "scroll";
-}
+};
 
-(function () {
+(() => {
   document.addEventListener("mousemove", parallax);
   const elem = document.querySelector(".book");
 
@@ -46,39 +46,55 @@ function scroll_to(selector) {
   }
 })();
 
-const carousel = document.querySelector(".carousel");
-const h = document.querySelector(".section-tours");
-let currdeg = 0;
-const x = document.getElementsByClassName("item");
+(() => {
+  const next = document.querySelectorAll(".next");
+  const prev = document.querySelectorAll(".prev");
+  const carousel = document.querySelector(".carousel");
+  let currdeg = 0;
+  const rotate = (d) => {
+    if (d == "next") {
+      currdeg = currdeg - 60;
+    }
+    if (d == "prev") {
+      currdeg = currdeg + 60;
+    }
+    carousel.style.transform = "rotateY(" + currdeg + "deg)";
+  };
 
-function rotate(d) {
-  if (d == "next") {
-    currdeg = currdeg - 60;
-  }
-  if (d == "prev") {
-    currdeg = currdeg + 60;
-  }
-  carousel.style.transform = "rotateY(" + currdeg + "deg)";
-}
-(function () {
-  let myInt = setInterval((e) => {
+  next.forEach((el) => {
+    el.addEventListener("click", () => rotate("next"));
+  });
+  prev.forEach((el) => {
+    el.addEventListener("click", () => rotate("prev"));
+  });
+
+  let myInt;
+
+  const autoCarousel = () => {
     currdeg = currdeg - 60;
     carousel.style.transform = "rotateY(" + currdeg + "deg)";
-  }, 4000);
+  };
+
+  const startTimer = () => {
+    myInt = window.setInterval(autoCarousel, 4000);
+  };
+
+  const stopTimer = () => {
+    window.clearInterval(myInt);
+  };
+
+  window.addEventListener("focus", startTimer);
+
+  window.addEventListener("blur", stopTimer);
 
   carousel.addEventListener("mouseover", (e) => {
     clearInterval(myInt);
   });
 
-  carousel.addEventListener("mouseout", (e) => {
-    myInt = setInterval((e) => {
-      currdeg = currdeg - 60;
-      carousel.style.transform = "rotateY(" + currdeg + "deg)";
-    }, 4000);
-  });
+  carousel.addEventListener("mouseout", startTimer);
 })();
 
-hold.addEventListener("click", function () {
+hold.addEventListener("click", () => {
   hold.classList.toggle("click");
   for (let i = 0; i < 8; i++) {
     if (swiperBox[i].classList.value.includes("active")) {
@@ -90,74 +106,63 @@ hold.addEventListener("click", function () {
   }
 });
 
-wrapper.addEventListener("mousedown", function () {
+wrapper.addEventListener("mousedown", () => {
   for (let i = 0; i < 8; i++) {
     swipeB[i].classList.remove("hov");
     swipeB[i].classList.remove("hov");
   }
 });
 
-wrapper.addEventListener("touchstart", function () {
+wrapper.addEventListener("touchstart", () => {
   for (let i = 0; i < 8; i++) {
     swipeB[i].classList.remove("hov");
     swipeB[i].classList.remove("hov");
   }
 });
 
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+(() => {
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
-const startClock = () => {
-  const date = new Date();
-  let month = date.getMonth();
-  let dayNow = date.getDay();
-  let m = date.getMinutes();
-  let cor = "0" + m;
-  let hour = date.getHours();
-  for (let i = 0; i < 8; i++) {
-    time[i].innerHTML = `${hour}:${m < 10 ? cor : m}`;
-    day[i].innerHTML = `${days[dayNow]}, ${months[month]} ${date.getDate()}`;
-  }
-};
+  const startClock = () => {
+    const date = new Date();
+    let month = date.getMonth();
+    let dayNow = date.getDay();
+    let m = date.getMinutes();
+    let cor = "0" + m;
+    let hour = date.getHours();
+    for (let i = 0; i < 8; i++) {
+      time[i].innerHTML = `${hour}:${m < 10 ? cor : m}`;
+      day[i].innerHTML = `${days[dayNow]}, ${months[month]} ${date.getDate()}`;
+    }
+  };
 
-startClock();
+  startClock();
 
-const clock = () => {
-  const date = new Date();
-  let month = date.getMonth();
-  let dayNow = date.getDay();
-  let m = date.getMinutes();
-  let cor = "0" + m;
-  let hour = date.getHours();
-  for (let i = 0; i < 8; i++) {
-    time[i].innerHTML = `${hour}:${m < 10 ? cor : m}`;
-    day[i].innerHTML = `${days[dayNow]}, ${months[month]} ${date.getDate()}`;
-  }
-};
-
-const interval = setInterval(clock, 1000);
+  const interval = setInterval(startClock, 1000);
+})();
 
 const goToSocial = (name) => {
   name === "Linkedin"
