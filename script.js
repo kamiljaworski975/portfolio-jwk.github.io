@@ -68,16 +68,7 @@ const scroll_to = (selector) => {
     el.addEventListener("click", () => rotate("prev"));
   });
 
- 
-  window.addEventListener("focus", startTimer);
 
-  window.addEventListener("blur", stopTimer);
-
-  carousel.addEventListener("mouseover", (e) => {
-    clearInterval(myInt);
-  });
-
-  carousel.addEventListener("mouseout", startTimer);
 })();
 
 hold.addEventListener("click", () => {

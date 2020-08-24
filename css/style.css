@@ -1544,13 +1544,9 @@ body {
 
 .section-stories {
   position: relative;
-  height: 100vh;
+  height: 50vh;
 }
-@media only screen and (max-width: 56.25em) {
-  .section-stories {
-    padding: 10rem 0;
-  }
-}
+
 
 .section-book {
   padding: 15rem 0;
@@ -1581,9 +1577,9 @@ body {
   height: 100%;
   background: #f7f7f7;
   text-align: center;
-  font-size: 35vw;
+  font-size: 15vw;
   color: black;
-  line-height: 100vh;
+  line-height: 50vh;
   mix-blend-mode: screen;
   transition: 1s ease;
   cursor: pointer;
@@ -1600,8 +1596,8 @@ body {
   }
   .banner i.fab {
     height: 100%;
-    line-height: 50vh;
-    font-size: 50vw;
+    line-height: 25vh;
+    font-size: 20vw;
   }
 }
 
