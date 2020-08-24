@@ -68,21 +68,7 @@ const scroll_to = (selector) => {
     el.addEventListener("click", () => rotate("prev"));
   });
 
-  let myInt;
-
-  const autoCarousel = () => {
-    currdeg = currdeg - 60;
-    carousel.style.transform = "rotateY(" + currdeg + "deg)";
-  };
-
-  const startTimer = () => {
-    myInt = window.setInterval(autoCarousel, 4000);
-  };
-
-  const stopTimer = () => {
-    window.clearInterval(myInt);
-  };
-
+ 
   window.addEventListener("focus", startTimer);
 
   window.addEventListener("blur", stopTimer);
